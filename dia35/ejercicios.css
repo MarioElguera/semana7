@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.tabs {
+    background-color: #f1f1f1;
+    overflow: hidden;
+}
+
+.tablink {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 14px 16px;
+    cursor: pointer;
+    float: left;
+    width: 25%;
+    text-align: center;
+    font-size: 17px;
+}
+
+.tablink:hover {
+    background-color: #bbb;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: none;
+}
+
+#Seccion1 {
+    background-color: lightcoral;
+}
+
+#Seccion2 {
+    background-color: lightblue;
+}
+
+#Seccion3 {
+    background-color: lightgreen;
+}
+
+#Seccion4 {
+    background-color: lightyellow;
+}
+
+/* Estilos para los divs con efecto 3D */
+.flip-container {
+    perspective: 1000px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.flipper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.back {
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

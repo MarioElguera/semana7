@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Tabs</title>
+    <link rel="stylesheet" href="ejercicios.css">
+    <script src="ejercicios.js" defer></script>
+
+</head>
+
+<body>
+
+    <div class="tabs">
+        <button class="tablink" onclick="openTab(event, 'Seccion1')">Sección 1</button>
+        <button class="tablink" onclick="openTab(event, 'Seccion2')">Sección 2</button>
+        <button class="tablink" onclick="openTab(event, 'Seccion3')">Sección 3</button>
+        <button class="tablink" onclick="openTab(event, 'Seccion4')">Sección 4</button>
+    </div>
+
+    <div id="Seccion1" class="tabcontent">
+        <h3>Sección 1</h3>
+        <p>Contenido de la Sección 1.</p>
+        <div class="flip-container">
+            <div class="flipper">
+                <div class="front">
+                    <p>Pon el ratón encima</p>
+                </div>
+                <div class="back">
+                    <img src="./imagenes/dangerDays.jpg" alt="Imagen 1">
+                </div>
+            </div>
+        </div>
+        <div class="flip-container">
+            <div class="flipper">
+                <div class="front">
+                    <p>Pon el ratón encima</p>
+                </div>
+                <div class="back">
+                    <img src="./imagenes/kerplunk.jpg" alt="Imagen 2">
+                </div>
+            </div>
+        </div>
+        <div class="flip-container">
+            <div class="flipper">
+                <div class="front">
+                    <p>Pon el ratón encima</p>
+                </div>
+                <div class="back">
+                    <img src="./imagenes/megadeth.jpg" alt="Imagen 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Seccion2" class="tabcontent">
+        <h3>Sección 2</h3>
+        <p>Contenido de la Sección 2.</p>
+        <video id="video" src="./videos/Green Day - American Idiot [Official Music Video].mp4" controls autoplay muted>
+        </video>
+    </div>
+
+    <div id="Seccion3" class="tabcontent">
+        <h3>Sección 3</h3>
+        <p>Digita un numero del 0 al 9</p>
+        <input id="randomNumber" type="number" min="0" max="9">
+        <button onclick="validateRandomNumber()">Validar</button>
+        <p id="mensajeExito"></p>
+    </div>
+
+    <div id="Seccion4" class="tabcontent">
+        <h3>Sección 4</h3>
+        <p>Contenido de la Sección 4.</p>
+    </div>
+
+</body>
+
+</html>
