@@ -14,13 +14,23 @@ function openTab(evt, seccionName) {
     evt.currentTarget.classList.add("active");
 }
 
-function validateRandomNumber(number) {
+function validateRandomNumber() {
     const randomNumber = Math.floor(Math.random() * 9);
-    console.log("randomNumber =>", randomNumber);
+    const txtValue = document.getElementById('randomNumber').value;
 
-    if (randomNumber === number) {
+    if (randomNumber == txtValue) {
         document.getElementById("mensajeExito").innerHTML = "Felicitaciones ganaste."
     } else {
         document.getElementById("mensajeExito").innerHTML = "Oops perdiste."
+    }
+}
+
+function validateInput(input) {
+    let value = input.value;
+    if (value.length > 1) {
+        input.value = value.slice(0, 1);
+    }
+    if (!/^\d$/.test(input.value)) {
+        input.value = '';
     }
 }

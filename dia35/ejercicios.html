@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Tabs</title>
     <link rel="stylesheet" href="ejercicios.css">
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
     <script src="ejercicios.js" defer></script>
 
 </head>
 
 <body>
-
     <div class="tabs">
         <button class="tablink" onclick="openTab(event, 'Seccion1')">Sección 1</button>
         <button class="tablink" onclick="openTab(event, 'Seccion2')">Sección 2</button>
@@ -56,15 +56,15 @@
 
     <div id="Seccion2" class="tabcontent">
         <h3>Sección 2</h3>
-        <p>Contenido de la Sección 2.</p>
         <video id="video" src="./videos/Green Day - American Idiot [Official Music Video].mp4" controls autoplay muted>
         </video>
     </div>
 
     <div id="Seccion3" class="tabcontent">
         <h3>Sección 3</h3>
-        <p>Digita un numero del 0 al 9</p>
-        <input id="randomNumber" type="number" min="0" max="9">
+        <a>Digita un numero del 0 al 9 :</a>
+        <input id="randomNumber" oninput="validateInput(this)" type="number" min="0" max="9" step="1" pattern="\d*"
+            maxlength="1">
         <button onclick="validateRandomNumber()">Validar</button>
         <p id="mensajeExito"></p>
     </div>
@@ -72,6 +72,10 @@
     <div id="Seccion4" class="tabcontent">
         <h3>Sección 4</h3>
         <p>Contenido de la Sección 4.</p>
+        <video class="shake-rotate" id="video" src="./videos/My Chemical Romance - Na Na Na [Official Music Video].mp4"
+            controls autoplay muted>
+        </video>
+
     </div>
 
 </body>
